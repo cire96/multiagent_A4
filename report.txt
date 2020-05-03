@@ -1,0 +1,52 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'BreakNet.py'
+ outputting to 'newBreakNet.py'
+--------------------------------------------------------------------------------
+
+15:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+21:21: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+23:31: INFO: tf.variance_scaling_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+23:31: INFO: Renamed 'tf.variance_scaling_initializer' to 'tf.compat.v1.variance_scaling_initializer'
+25:21: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+27:31: INFO: tf.variance_scaling_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+27:31: INFO: Renamed 'tf.variance_scaling_initializer' to 'tf.compat.v1.variance_scaling_initializer'
+29:21: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+31:31: INFO: tf.variance_scaling_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+31:31: INFO: Renamed 'tf.variance_scaling_initializer' to 'tf.compat.v1.variance_scaling_initializer'
+33:21: INFO: Renamed 'tf.layers.conv2d' to 'tf.compat.v1.layers.conv2d'
+35:31: INFO: tf.variance_scaling_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+35:31: INFO: Renamed 'tf.variance_scaling_initializer' to 'tf.compat.v1.variance_scaling_initializer'
+40:27: INFO: Renamed 'tf.layers.flatten' to 'tf.compat.v1.layers.flatten'
+41:31: INFO: Renamed 'tf.layers.flatten' to 'tf.compat.v1.layers.flatten'
+44:25: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+46:31: INFO: tf.variance_scaling_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+46:31: INFO: Renamed 'tf.variance_scaling_initializer' to 'tf.compat.v1.variance_scaling_initializer'
+47:21: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+49:31: INFO: tf.variance_scaling_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+49:31: INFO: Renamed 'tf.variance_scaling_initializer' to 'tf.compat.v1.variance_scaling_initializer'
+52:65: INFO: Added keywords to args of function 'tf.reduce_mean'
+53:27: INFO: Added keywords to args of function 'tf.argmax'
+59:24: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+61:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+63:17: INFO: Added keywords to args of function 'tf.reduce_sum'
+66:20: INFO: Added keywords to args of function 'tf.reduce_mean'
+66:35: INFO: tf.losses.huber_loss requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+66:35: INFO: Renamed 'tf.losses.huber_loss' to 'tf.compat.v1.losses.huber_loss'
+67:25: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+--------------------------------------------------------------------------------
+
