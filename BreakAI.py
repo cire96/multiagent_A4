@@ -1,5 +1,6 @@
 import gym
 import tensorflow as tf
+from BreakNet import *
 import numpy as np
 
 class AtariWrapper():
@@ -59,14 +60,12 @@ class AtariWrapper():
         else:
             return -1
 
+    
+def main():
+    Atari=AtariWrapper('Breakout-v0')
+    print(Atari.env.action_space)
+    Net=BreakNet(4)
+    
 
-env = gym.make('Breakout-v0')
-print(env.action_space)
-print(env.observation_space)
-print(env.unwrapped.get_action_meanings())
-observation=env.reset()
-for _ in range(1000):
-    env.render()
-    ob,reward,game_over=env.step(env.action_space.sample()) # take a random action
-
-env.close()
+if __name__=="__main__":
+    main()
