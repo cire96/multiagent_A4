@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 
 class ReplayMemory:
@@ -77,6 +78,10 @@ class ReplayMemory:
 
 
     def save(self, folder_name):
+
+        if not os.path.isdir(folder_name):
+            os.mkdir(folder_name)
+
         np.save(folder_name + '/actions.npy', self.actions)
         np.save(folder_name + '/frames.npy', self.frames)
         np.save(folder_name + '/rewards.npy', self.rewards)

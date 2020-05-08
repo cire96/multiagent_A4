@@ -4,11 +4,11 @@ import tensorflow as tf
 import numpy as np
 
 class AtariWrapper():
-    def __init__(self,envID,no_random_shoot=10,n_history_step=4):
+    def __init__(self,envID,no_op_steps=10,n_history_step=4):
         self.env = gym.make(envID)
         self.state = None
         self.last_lives = 0
-        self.no_random_shoot = no_random_shoot
+        self.no_op_steps = no_op_steps
         self.n_history_step = n_history_step
 
     def reset(self, evaluation=False):

@@ -1,9 +1,11 @@
 import gym
+import json
 import tensorflow as tf
 from BreakNet import *
 from DQN import *
 from AtariWrapper import *
 import numpy as np
+import os
 
 class BreakAI(object):
     def __init__(self, dqn, target_dqn, replay_buffer, n_actions=4, input_shape=(84, 84), batch_size=32, 
@@ -132,6 +134,9 @@ class BreakAI(object):
         return float(loss.numpy()), error
     
     def save(self, folder_name, **kwargs):
+
+        if not os.path.isdir(folder_name):
+            os.makedirs(folder_name)
 
         # Save DQN and target DQN
         self.DQN.save(folder_name + '/dqn.h5')

@@ -26,7 +26,7 @@ def main():
     UPDATE_FREQ = 4                   # Number of actions between gradient descent steps
 
     
-    LOAD_FROM = None
+    LOAD_FROM = 'Memory\save-00089426'
     LOAD_REPLAY_MEMORY =True
     SAVE_PATH = 'Memory'
     WRITE_TENSORBOARD = True
