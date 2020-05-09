@@ -17,7 +17,7 @@ class AtariWrapper():
         simulate_loss=True
         if evaluation:
             for i in range(np.random.randint(1, self.no_op_steps)):
-                observation = self.env.step(1) # Action 'Fire'
+                self.env.step(1) # Action 'Fire'
         processedObs = self.ImageProcessor(observation)  
         self.state = np.repeat(processedObs, self.n_history_step, axis=2)
         
